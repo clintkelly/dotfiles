@@ -57,13 +57,11 @@ export PATH=$HOME/work/wibidata/devtools/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
 # Fix ridiculous ulimit.
-ulimit -S -n 16384
+#ulimit -S -n 16384
 
 # Increase size of PermGen space for Maven
 export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m"
 export SBT_OPTS=-XX:MaxPermSize=512m
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Explicitly set JAVA_HOME
 JAVA_HOME=$(/usr/libexec/java_home)
@@ -71,4 +69,7 @@ export JAVA_HOME=$JAVA_HOME
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PYENV_ROOT=/usr/local/opt/pyenv
 eval "$(pyenv init -)"

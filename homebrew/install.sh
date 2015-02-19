@@ -12,7 +12,15 @@ then
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
 fi
 
+brew doctor
+brew update
+
 # Install homebrew packages
 brew install grc coreutils spark
+brew install vim
+brew install pyenv
+
+brew install caskroom/cask/brew-cask
+#brew cask install dropbox
 
 exit 0
