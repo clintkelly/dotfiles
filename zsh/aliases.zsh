@@ -1,6 +1,7 @@
 alias reload!='. ~/.zshrc'
 
 alias readlink='greadlink'
+alias history='history 1'
 alias h='history | tail -n 50'
 alias c='clear'
 alias rm='rm -i'
