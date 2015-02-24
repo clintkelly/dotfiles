@@ -1,6 +1,7 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 "source ~/.vim/clint/vundle.vim
+source $HOME/.dotfiles/vim/vundle.vim
 set showmode
 "set background=dark
 " allow backspacing over everything in insert mode
