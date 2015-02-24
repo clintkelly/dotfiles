@@ -1,52 +1,56 @@
 " Vundle settings
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+filetype off
+set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My Bundles here:
 
 " Git / vim integration
-Bundle 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 
 " Standard settings
-Bundle 'tpope/vim-sensible'
+Plugin 'tpope/vim-sensible'
 
 " Useful shortcuts (e.g., [q and ]q in quickfix)
-Bundle 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-unimpaired'
 
 " Move through files easier
-Bundle 'Lokaltog/vim-easymotion'
+" Plugin 'Lokaltog/vim-easymotion'
 
 " Easily open files
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
-Bundle 'surround.vim'
+Plugin 'surround.vim'
 
 " Shell support within vim
-Bundle 'vim-scripts/Conque-Shell'
+" Plugin 'vim-scripts/Conque-Shell'
 
 " For ctags
-Bundle 'Tagbar'
+" Plugin 'Tagbar'
 
 " Scala syntax, etc.
-Bundle 'derekwyatt/vim-scala'
+Plugin 'derekwyatt/vim-scala'
+
+" Scala syntax, etc.
+" Bundle 'derekwyatt/vim-sbt'
 
 " Avro syntax
-Bundle 'http://github.com/dln/avro-vim/'
+Plugin 'http://github.com/dln/avro-vim/'
 
 " CQL syntax
-Bundle 'https://github.com/elubow/cql-vim'
+Plugin 'https://github.com/elubow/cql-vim'
 
 " Python folding
-Bundle 'tmhedberg/SimpylFold'
+Plugin 'tmhedberg/SimpylFold'
 
-Bundle 'keepcase.vim'
+Plugin 'keepcase.vim'
 
 " Default markdown syntax highlighting is super-broken
-Bundle 'Markdown-syntax'
+Plugin 'Markdown-syntax'
 
 
 " Specific java support
@@ -102,16 +106,18 @@ Bundle 'Markdown-syntax'
 "Bundle 'git://git.wincent.com/command-t.git'
 "Bundle 'MarcWeber/vim-addon-mw-utils'
 "Bundle 'tomtom/tlib_vim'
-
-filetype plugin indent on     " required!
+"
+"
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" Put your non-Plugin stuff after this line
+"
 
-
+call vundle#end()
+filetype plugin indent on     " required!
