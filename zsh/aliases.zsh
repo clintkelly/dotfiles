@@ -28,3 +28,4 @@ alias hg='history | grep '
 alias schema='cd /Users/clint/work/kiji/kiji-schema/kiji-schema'
 alias editnotes='vim /Users/clint/Documents/Dropbox/my_stuff/notes.txt'
 
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"

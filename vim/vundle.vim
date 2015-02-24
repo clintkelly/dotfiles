@@ -1,7 +1,7 @@
 " Vundle settings
 filetype off
 set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#begin('~/.dotfiles/vim/bundle/')
 
 " let Vundle manage Vundle
 " required! 
