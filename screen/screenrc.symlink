@@ -11,6 +11,6 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce "on"
  
 # Enable 256 color term
-term xterm-256color
+#term term-256color
 
 defscrollback 100000

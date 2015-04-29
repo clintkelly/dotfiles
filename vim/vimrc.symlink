@@ -3,11 +3,12 @@ filetype off                   " required!
 "source ~/.vim/clint/vundle.vim
 source $HOME/.dotfiles/vim/vundle.vim
 set showmode
-"set background=dark
+set background=dark
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set showcmd
 syntax on
+set t_Co=256
 
 " Can give you a visual clue if your code is going too far...
 " Requires vim 7.3
