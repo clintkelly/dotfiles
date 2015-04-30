@@ -9,7 +9,7 @@
 if test ! $(which brew)
 then
   echo "  Installing Homebrew for you."
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 brew doctor
@@ -21,6 +21,13 @@ brew install vim
 brew install pyenv
 
 brew install caskroom/cask/brew-cask
-#brew cask install dropbox
+brew cask install dropbox
+brew cask install google-chrome
+brew cask install flux
+brew cask install slack
+brew cask install rdio
+brew cask install textexpander
+#brew cask install doublepane
+
 
 exit 0

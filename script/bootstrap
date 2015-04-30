@@ -138,6 +138,13 @@ install_dotfiles () {
   done
 }
 
+echo $0 | grep zsh > /dev/null 2>&1 | true
+if [[ ${PIPESTATUS[0]} != 0 ]]; then
+  info "changing your login shell to zsh"
+  chsh -s $(which zsh);ok
+else
+  info "looks like you are already using zsh. woot!"
+fi
 setup_gitconfig
 install_dotfiles
 
@@ -152,6 +159,7 @@ then
     fail "error installing dependencies"
   fi
 fi
+
 
 echo ''
 echo '  All installed!'
