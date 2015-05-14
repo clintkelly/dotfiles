@@ -19,6 +19,8 @@ brew update
 brew install grc coreutils spark
 brew install vim
 brew install pyenv
+brew install hub
+brew install screen
 
 brew install caskroom/cask/brew-cask
 brew cask install dropbox
@@ -27,6 +29,7 @@ brew cask install flux
 brew cask install slack
 brew cask install rdio
 brew cask install textexpander
+brew install tmux
 #brew cask install doublepane
 
 

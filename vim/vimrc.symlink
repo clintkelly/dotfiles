@@ -58,16 +58,9 @@ nnoremap <silent> <Leader>b :TagbarToggle<CR>
 nnoremap <Leader>p :set paste<CR>
 nnoremap <Leader>P :set nopaste<CR>
 
-" Make DDL files look like SQL
-autocmd BufNewFile,BufRead *.ddl :set syn=ddl
-autocmd BufNewFile,BufRead *.cql :set syn=cql
-autocmd BufNewFile,BufRead *.cql :set textwidth=100
-
 " Not sure how this got screwed up...
 autocmd BufNewFile,BufRead *.java :set textwidth=100
 autocmd BufNewFile,BufRead *.py :set textwidth=100
-
-autocmd BufRead,BufNewFile *.avdl setlocal filetype=avro-idl
 
 " Python - fix the annoying thing with # going to the beginning of the line
 " all of the time
@@ -91,73 +84,13 @@ let g:ctrlp_custom_ignore = {
 " Call custom function to put function arguments onto a new line
 nnoremap <leader>, :call AutoIndentVarList()
 
-" Scala {{{3
-let type_scala = {}
-let type_scala.ctagstype = 'Scala'
-let type_scala.kinds     = [
-  \ {'short' : 'p', 'long' : 'packages',  'fold' : 1 },
-  \ {'short' : 'V', 'long' : 'values',    'fold' : 0 },
-  \ {'short' : 'v', 'long' : 'variables', 'fold' : 0 },
-  \ {'short' : 'T', 'long' : 'types',     'fold' : 0 },
-  \ {'short' : 't', 'long' : 'traits',    'fold' : 0 },
-  \ {'short' : 'o', 'long' : 'objects',   'fold' : 0 },
-  \ {'short' : 'a', 'long' : 'aclasses',  'fold' : 0 },
-  \ {'short' : 'c', 'long' : 'classes',   'fold' : 0 },
-  \ {'short' : 'r', 'long' : 'cclasses',  'fold' : 0 },
-  \ {'short' : 'm', 'long' : 'methods',   'fold' : 0 }
-\ ]
-let type_scala.sro        = '.'
-let type_scala.kind2scope = {
-  \ 'T' : 'type',
-  \ 't' : 'trait',
-  \ 'o' : 'object',
-  \ 'a' : 'abstract class',
-  \ 'c' : 'class',
-  \ 'r' : 'case class'
-\ }
-let type_scala.scope2kind = {
-  \ 'type'           : 'T',
-  \ 'trait'          : 't',
-  \ 'object'         : 'o',
-  \ 'abstract class' : 'a',
-  \ 'class'          : 'c',
-  \ 'case class'     : 'r'
-\ }
-"let s:known_types.scala = type_scala
-" customize colors a little bit (should be a different file)
-hi scalaNew gui=underline
-hi scalaMethodCall gui=italic
-hi scalaValName gui=underline
-hi scalaVarName gui=underline
-
-" Worth a shot...
-"syn region myFold start="{" end="}" contains=ALL transparent fold
-"syn sync fromstart
-"set foldmethod=syntax
-" Vim Compiler File
-" Compiler:	maven2
-" Maintainer:	Ronald Tschalär <ronald@innovation.ch>
-" Last Change:	Tue, 18 Apr 2006 03:08:12 PDT
-
-if exists("current_compiler")
-    finish
-endif
-let current_compiler = "maven2"
-
-if exists(":CompilerSet") != 2		" older Vim always used :setlocal
-  command -nargs=* CompilerSet setlocal <args>
-endif
-
-CompilerSet makeprg=mvn
-
-CompilerSet errorformat=
-    \%-G[%\\(WARNING]%\\)%\\@!%.%#,
-    \%A%[%^[]%\\@=%f:[%l\\,%v]\ %m,
-    \%W[WARNING]\ %f:[%l\\,%v]\ %m,
-    \%-Z\ %#,
-    \%-Clocation\ %#:%.%#,
-    \%C%[%^:]%#%m,
-    \%-G%.%#
-
 " Keeps at lease ten lines above and below the cursor at all times!
 set scrolloff=10
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+"nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>

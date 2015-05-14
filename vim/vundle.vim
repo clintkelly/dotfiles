@@ -118,6 +118,7 @@ Plugin 'Markdown-syntax'
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on     " required!

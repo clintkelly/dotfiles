@@ -31,3 +31,8 @@ alias editnotes='vim /Users/clint/Documents/Dropbox/my_stuff/notes.txt'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 alias rb="git rebase -i origin/master"
+alias rekey="ssh-add -e /usr/local/lib/opensc-pkcs11.so; ssh-add -s /usr/local/lib/opensc-pkcs11.so -t 28800"
+
+function gpra() {
+  git pull-request -b airbnb:${1:-master} -h airbnb:$(git rev-parse --abbrev-ref HEAD)
+}

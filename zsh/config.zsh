@@ -77,3 +77,4 @@ export PYENV_ROOT=/usr/local/opt/pyenv
 eval "$(pyenv init -)"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+eval "$(hub alias -s)"
