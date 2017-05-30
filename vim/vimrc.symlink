@@ -3,12 +3,17 @@ filetype off                   " required!
 "source ~/.vim/clint/vundle.vim
 source $HOME/.dotfiles/vim/vundle.vim
 set showmode
-set background=dark
+"set background=dark
+let mapleader = "\<Space>"
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set showcmd
 syntax on
 set t_Co=256
+
+" Configure browser for haskell_doc.vim
+let g:haddock_browser = "open"
+let g:haddock_browser_callformat = "%s %s"
 
 " Can give you a visual clue if your code is going too far...
 " Requires vim 7.3
@@ -31,28 +36,8 @@ inoremap df <ESC>
 source $HOME/.dotfiles/vim/whitespace.vim
 source $HOME/.dotfiles/vim/search.vim
 source $HOME/.dotfiles/vim/splitting_and_opening.vim
-source $HOME/.dotfiles/vim/color.vim
+"source $HOME/.dotfiles/vim/color.vim
 source $HOME/.dotfiles/vim/statusline.vim
-
-" Set UltiSnips to use something other than tab, so that we can use SuperTab
-" at the same time
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-" Enable OmniCompletion
-"set omnifunc=syntaxcomplete#Complete 
-set omnifunc=javacomplete#Complete
-" May be good for java:
-" Also a tip:
-"
-" :set path=**
-" :chdir your/project/root
-" This makes ^wf on a classname a very nice feature for navigating a large
-" project.
-
-" Easy toggling for tagbar
-nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 " One of the most common things I do is set paste / set nopaste
 nnoremap <Leader>p :set paste<CR>
@@ -69,8 +54,10 @@ autocmd BufRead,BufNewFile *.py :set cindent
 autocmd BufRead,BufNewFile *.py :set tabstop=2
 autocmd BufRead,BufNewFile *.py :set softtabstop=2
 autocmd BufRead,BufNewFile *.py :set shiftwidth=2
-autocmd BufRead,BufNewFile *.md :set syn=mkd
+"autocmd BufRead,BufNewFile *.md :set syn=mkd
 autocmd BufRead,BufNewFile *.md :set textwidth=100
+autocmd BufRead,BufNewFile *.md :set nosmartindent
+autocmd BufRead,BufNewFile *.md :set noautoindent
 
 " Tell ctrlp to ignore .class and .html
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.png     " MacOSX/Linux
@@ -80,9 +67,6 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
-
-" Call custom function to put function arguments onto a new line
-nnoremap <leader>, :call AutoIndentVarList()
 
 " Keeps at lease ten lines above and below the cursor at all times!
 set scrolloff=10

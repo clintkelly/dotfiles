@@ -52,8 +52,6 @@ bindkey '^?' backward-delete-char
 # -----------------------------------------------------------------------------
 # Custom stuff from Clint
 # Add devtools to path
-export PATH=$HOME/work/wibidata/devtools/bin:$PATH
-#export PATH=/usr/local/opt/ruby193/bin:$PATH
 
 # Home brew stuff
 export PATH=/usr/local/bin:$PATH
@@ -78,3 +76,8 @@ eval "$(pyenv init -)"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 eval "$(hub alias -s)"
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+#export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem    

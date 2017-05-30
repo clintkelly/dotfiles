@@ -30,6 +30,8 @@ brew cask install slack
 brew cask install rdio
 brew cask install textexpander
 brew install tmux
+brew install jq
+brew cask install atom
 #brew cask install doublepane
 
 

@@ -16,7 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 
 " Useful shortcuts (e.g., [q and ]q in quickfix)
-Plugin 'tpope/vim-unimpaired'
+" Plugin 'tpope/vim-unimpaired'
 
 " Move through files easier
 " Plugin 'Lokaltog/vim-easymotion'
@@ -24,7 +24,7 @@ Plugin 'tpope/vim-unimpaired'
 " Easily open files
 Plugin 'kien/ctrlp.vim'
 
-Plugin 'surround.vim'
+" Plugin 'surround.vim'
 
 " Shell support within vim
 " Plugin 'vim-scripts/Conque-Shell'
@@ -33,25 +33,25 @@ Plugin 'surround.vim'
 " Plugin 'Tagbar'
 
 " Scala syntax, etc.
-Plugin 'derekwyatt/vim-scala'
+" Plugin 'derekwyatt/vim-scala'
 
 " Scala syntax, etc.
 " Bundle 'derekwyatt/vim-sbt'
 
 " Avro syntax
-Plugin 'http://github.com/dln/avro-vim/'
+" Plugin 'http://github.com/dln/avro-vim/'
 
 " CQL syntax
-Plugin 'https://github.com/elubow/cql-vim'
+" Plugin 'https://github.com/elubow/cql-vim'
 
 " Python folding
 Plugin 'tmhedberg/SimpylFold'
 
 Plugin 'keepcase.vim'
 
-" Default markdown syntax highlighting is super-broken
-Plugin 'Markdown-syntax'
-
+" Hopefully this is a better markdown highligher!
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " Specific java support
 " Bundle 'vim-scripts/javacomplete.git'
@@ -59,8 +59,6 @@ Plugin 'Markdown-syntax'
 " ...
 " Others to check out
 " tabular - text alignment
-
-
 " abolish - for renaming variables in code
 " gundo - graphical undo tree viewer
 " matchit - match more than just { } and [ ] with %
@@ -119,6 +117,15 @@ Plugin 'Markdown-syntax'
 " Put your non-Plugin stuff after this line
 "
 Plugin 'christoomey/vim-tmux-navigator'
+
+Plugin 'laurilehmijoki/haskellmode-vim'
+
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'andreimaxim/vim-io'
+
+Plugin 'JuliaLang/julia-vim'
+
+Plugin 'justinj/vim-pico8-syntax'
 
 call vundle#end()
 filetype plugin indent on     " required!
