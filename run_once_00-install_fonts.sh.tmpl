@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Installing Nerd Fonts..."
+
+if ! brew list --cask --versions font-meslo-lg-nerd-font >/dev/null 2>&1; then
+  brew install --cask font-meslo-lg-nerd-font
+fi
+
