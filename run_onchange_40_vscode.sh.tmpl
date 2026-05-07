@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+{{- if eq .chezmoi.os "darwin" }}
+
+if command -v code >/dev/null 2>&1; then
+  code --install-extension ms-python.python
+  code --install-extension charliermarsh.ruff
+  code --install-extension ms-python.vscode-pylance
+  code --install-extension eamodio.gitlens
+else
+  echo "VS Code CLI not found; skipping extensions"
+fi
+
+{{- end }}

@@ -6,6 +6,8 @@
 	precomposeunicode = true
 	excludesfile = /Users/clint_kelly/.gitignore_global
 	pager = less -F -X -R
+	excludesfile = ~/.gitignore_global
+
 [pager]
 	branch = false
 [user]
