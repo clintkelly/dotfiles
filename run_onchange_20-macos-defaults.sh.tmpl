@@ -18,6 +18,10 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 mkdir -p "$HOME/Screenshots"
 defaults write com.apple.screencapture location -string "$HOME/Screenshots"
 
+# Dock
+defaults write com.apple.dock autohide -bool true
+killall Dock
+
 # Coding sanity
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
